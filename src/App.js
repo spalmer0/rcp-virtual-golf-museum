@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import BookPage from './pages/BookPage';
+import ArtPage from './pages/ArtPage';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import styled from 'styled-components';
 
-function App() {
+
+const StyledApp = styled.div`
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  main {
+    flex-grow: 1;
+    padding: 50px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+`;
+
+
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <StyledApp>
+        <Header />
+          <Switch>
+            <Route component={HomePage} path="/" exact />
+            <Route component={BookPage} path="/books" />
+            <Route component={ArtPage} path="/artwork" />
+          </Switch>
+        <Footer />
+      </StyledApp>
+    </BrowserRouter>
+    
   );
+
 }
 
-export default App;
+

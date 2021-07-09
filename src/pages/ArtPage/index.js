@@ -6,7 +6,6 @@ const StyledPage = styled.main`
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    
 
  
 
@@ -32,15 +31,18 @@ p {
             align-items: center;
         }
     }
+
 `;
 
 
-function HomePage(props) {
+
+function ArtPage(props) {
     return (
         <StyledPage>
-            <h1>Home Page</h1>
+            <h1>Art Page</h1>
         </StyledPage>
     );
+    
 };
 
-export default HomePage;
+export default ArtPage;
