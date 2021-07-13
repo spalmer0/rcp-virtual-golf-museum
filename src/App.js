@@ -5,6 +5,7 @@ import BookPage from './pages/BookPage';
 import ArtPage from './pages/ArtPage';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import styled from 'styled-components';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const StyledApp = styled.div`
@@ -13,7 +14,7 @@ const StyledApp = styled.div`
   flex-direction: column;
   main {
     flex-grow: 1;
-    padding: 50px;
+    /* padding: 50px; */
     background-repeat: no-repeat;
     background-size: 100%;
   }

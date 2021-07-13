@@ -5,10 +5,13 @@ const StyledHeader = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #000;
+    /* background-color: #000; */
     color: #fff;
-    box-shadow: 3px 3px 5px 3px lightgrey;
+    /* box-shadow: 3px 3px 5px 3px lightgrey; */
     padding: 0 15px;
+    position:absolute;
+    z-index:2;
+    /* right:0; */
 
     nav {
         display: flex;
