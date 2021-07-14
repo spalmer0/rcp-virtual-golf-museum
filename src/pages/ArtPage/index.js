@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import theMatch from '../../images/theMatch.jpeg';
 
 
 const StyledPage = styled.main`
@@ -6,6 +7,14 @@ const StyledPage = styled.main`
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+
+    .imageHeader {
+    width: 100%;
+    height: auto;
+    position:top;
+    z-index:1;
+    right:0;
+}
 
  
 
@@ -39,7 +48,7 @@ p {
 function ArtPage(props) {
     return (
         <StyledPage>
-            <h1>Art Page</h1>
+            <img className="imageHeader" alt="The Match" src={theMatch} />
         </StyledPage>
     );
     

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import oldbooks from '../../images/oldbooks.jpeg';
+import oldBooks2 from '../../images/oldbooks2.jpeg';
 import architecture from '../../images/architecture.jpeg';
 import gameOfGolf from '../../images/game-of-golf.jpeg';
 import secret from '../../images/secret.jpg';
@@ -16,18 +16,13 @@ const StyledPage = styled.main`
     justify-content: space-evenly;
     align-items: center;
 
-
- /* .hero::before {    
-      content: "";
-      background-image: url(${oldbooks});
-      background-size: cover;
-      position: absolute;
-      top: 0px;
-      right: 0px;
-      bottom: 0px;
-      left: 0px;
-      opacity: 0.75;
-} */
+.imageHeader {
+    width: 100%;
+    height: auto;
+    position:top;
+    z-index:1;
+    right:0;
+}
 
  
 
@@ -63,6 +58,7 @@ function BookPage(props) {
     
     return (
         <StyledPage>
+            <img className="imageHeader" alt="Old Books" src={oldBooks2} />
             <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque risus sit amet nisl aliquet luctus. Vivamus euismod gravida pellentesque. Mauris ornare porta velit. Suspendisse nec libero ut odio porttitor laoreet eget at metus. Cras facilisis pretium scelerisque. Nullam cursus elementum finibus. Maecenas eu nisl egestas, eleifend magna at, pulvinar arcu. Sed varius eros turpis, eu egestas orci bibendum mollis. Donec a enim felis. Mauris urna nisi, pharetra ut nisi sit amet, scelerisque pellentesque magna. Fusce imperdiet turpis at magna mattis, ac luctus mi bibendum. In aliquet gravida nibh sit amet cursus.
             </p>
