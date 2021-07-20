@@ -12,12 +12,7 @@ const StyledApp = styled.div`
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  main {
-    flex-grow: 1;
-    /* padding: 50px; */
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
+  
 `;
 
 

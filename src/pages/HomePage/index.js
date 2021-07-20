@@ -10,69 +10,86 @@ const StyledPage = styled.main`
     justify-content: space-evenly;
     align-items: center;
     
-.imageHeader {
-    width: 100%;
-    height: auto;
-    position:top;
-    z-index:1;
-    right:0;
-}
+    .img-wrapper {
+        display: inline-block;
+        overflow: hidden;
+        max-height:700px;
+    }
 
-.homeBody {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    min-height: 5vh;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
-    text-decoration: none;   
-}
+    /* .img-wrapper img {
+        transition: all .2s ease;
+        vertical-align: middle;
+    } */
+    
+    .imageHeader {
+        display: block;
+        width: 100%;
+        height: auto;
+        position:top;
+        z-index:1;
+        right:0;
+    }
 
-.homeBody img {
-    width: 100%;
-    height: auto;
-}
+    /* .imageHeader:hover {
+        transform:scale(1.5);
+    } */
 
-.firstText {
-    display: flex;
-    justify-content: center;
-    margin: 5px;
-    grid-column: 1 / 1;
-    grid-row: 1 / 1;
-}
+    .homeBody {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        min-height: 5vh;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        text-decoration: none;   
+    }
 
-.firstImage {
-    display: flex;
-    justify-content: center;
-    margin: 5px;
-    grid-column: 2 / 2;
-    grid-row: 1 / 1;
-    min-height: 220;
-}
+    .homeBody img {
+        width: 100%;
+        height: auto;
+    }
 
-.secondText {
-    display: flex;
-    justify-content: center;
-    margin: 5px;
-    grid-column: 2 / 2;
-    grid-row: 2 / 2;
-}
+    .firstText {
+        display: flex;
+        justify-content: center;
+        margin: 5px;
+        grid-column: 1 / 1;
+        grid-row: 1 / 1;
+    }
 
-.secondImage {
-    display: flex;
-    justify-content: center;
-    margin: 5px;
-    grid-column: 1 / 1;
-    grid-row: 2 / 2;
-}
- 
+    .firstImage {
+        display: flex;
+        justify-content: center;
+        margin: 5px;
+        grid-column: 2 / 2;
+        grid-row: 1 / 1;
+        min-height: 220px;
+    }
 
-p {
-  color: #000;
-  margin: 10px;
-  background-color: #fff;
-}
+    .secondText {
+        display: flex;
+        justify-content: center;
+        margin: 5px;
+        grid-column: 2 / 2;
+        grid-row: 2 / 2;
+    }
+
+    .secondImage {
+        display: flex;
+        justify-content: center;
+        margin: 5px;
+        grid-column: 1 / 1;
+        grid-row: 2 / 2;
+        min-height: 220px;
+    }
+    
+
+    p {
+    color: #000;
+    margin: 10px;
+    background-color: #fff;
+    }
 
     @media (max-width: 1100px) {
         div {
@@ -88,7 +105,9 @@ p {
 function HomePage(props) {
     return (
         <StyledPage>
-            <img className="imageHeader" alt="Old Course" src={oldCourse} />
+            <div class="img-wrapper">
+                <img className="imageHeader" alt="Old Course" src={oldCourse} />
+            </div>
             <div className="homeBody">
                 <div className="firstText">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus blandit orci, accumsan vestibulum felis imperdiet nec. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus pretium sapien vitae condimentum ultricies. Nullam quis turpis arcu. Quisque dui orci, accumsan semper ipsum feugiat, sollicitudin consequat lacus. Morbi eu euismod justo. Integer nec ullamcorper metus.</p>

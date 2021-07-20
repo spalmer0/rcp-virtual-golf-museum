@@ -17,7 +17,15 @@ const StyledPage = styled.main`
     justify-content: space-evenly;
     align-items: center;
 
+    .img-wrapper {
+        display: inline-block;
+        overflow: hidden;
+        max-height:700px;
+        width:100%;
+    }
+    
     .imageHeader {
+        display:block;
         width: 100%;
         height: auto;
         position:top;
@@ -70,7 +78,9 @@ function BookPage(props) {
     
     return (
         <StyledPage>
-            <img className="imageHeader" alt="Old Books" src={oldBooks2} />
+            <div className="img-wrapper">
+                <img className="imageHeader" alt="Old Books" src={oldBooks2} />
+            </div>
             <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque risus sit amet nisl aliquet luctus. Vivamus euismod gravida pellentesque. Mauris ornare porta velit. Suspendisse nec libero ut odio porttitor laoreet eget at metus. Cras facilisis pretium scelerisque. Nullam cursus elementum finibus. Maecenas eu nisl egestas, eleifend magna at, pulvinar arcu. Sed varius eros turpis, eu egestas orci bibendum mollis. Donec a enim felis. Mauris urna nisi, pharetra ut nisi sit amet, scelerisque pellentesque magna. Fusce imperdiet turpis at magna mattis, ac luctus mi bibendum. In aliquet gravida nibh sit amet cursus.
             </p>
