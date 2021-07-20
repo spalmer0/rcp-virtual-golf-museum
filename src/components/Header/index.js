@@ -8,10 +8,11 @@ const StyledHeader = styled.header`
     /* background-color: #000; */
     color: #fff;
     /* box-shadow: 3px 3px 5px 3px lightgrey; */
-    padding: 0 15px;
+    /* padding: 0 15px; */
     position:absolute;
     z-index:2;
     /* right:0; */
+    /* position: sticky; */
 
     nav {
         display: flex;

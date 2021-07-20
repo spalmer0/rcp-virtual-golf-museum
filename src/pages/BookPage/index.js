@@ -47,8 +47,10 @@ img {
 `;
 
 
-
 function BookPage(props) {
+    
+    
+    const books = [architecture, gameOfGolf, secret, snead];
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -62,26 +64,19 @@ function BookPage(props) {
             <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque risus sit amet nisl aliquet luctus. Vivamus euismod gravida pellentesque. Mauris ornare porta velit. Suspendisse nec libero ut odio porttitor laoreet eget at metus. Cras facilisis pretium scelerisque. Nullam cursus elementum finibus. Maecenas eu nisl egestas, eleifend magna at, pulvinar arcu. Sed varius eros turpis, eu egestas orci bibendum mollis. Donec a enim felis. Mauris urna nisi, pharetra ut nisi sit amet, scelerisque pellentesque magna. Fusce imperdiet turpis at magna mattis, ac luctus mi bibendum. In aliquet gravida nibh sit amet cursus.
             </p>
-            <Link>
-                <img src={architecture} alt="architecture" onClick={handleShow} />
-            </Link>
-                
-            <Link>
-                <img src={gameOfGolf} alt="gameOfGolf" onClick={handleShow} />
-            </Link>
-
-            <Link>
-                <img src={secret} alt="secret" onClick={handleShow} />
-            </Link>
-
-            <Link>
-                <img src={snead} alt="snead" onClick={handleShow} />
-
-            </Link>
+            
+            <div className="col">
+                {books.map(book => 
+                    <Link>
+                        <img src={book} alt="book" onClick={handleShow} />
+                    </Link> 
+                )}
+            </div>
+            
 
             <Modal {...props} className="book-modal" show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                <Modal.Title>Golf Architecture in America</Modal.Title>
+                <Modal.Title>Title</Modal.Title>
                 </Modal.Header>
                 <Modal.Body style={modalStyle}  >
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>

@@ -48,6 +48,7 @@ const StyledPage = styled.main`
     margin: 5px;
     grid-column: 2 / 2;
     grid-row: 1 / 1;
+    min-height: 220;
 }
 
 .secondText {
