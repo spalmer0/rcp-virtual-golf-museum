@@ -16,6 +16,7 @@ const StyledHeader = styled.header`
 
     nav {
         display: flex;
+        margin-left:30px;
     }
 
     ul {
@@ -24,14 +25,17 @@ const StyledHeader = styled.header`
         margin-top: 20px;
     }
     
-    li {
-        font-size: 25px;
+    h1 {
+        margin: 20px 0px 0px 20px;
+        font-size: 4vw;
         margin-right: 20px;
     }
 
-    h1 {
+    li {
+        font-size: 3vw;
         margin-right: 20px;
     }
+
 
     a {
         text-decoration: none;
@@ -44,9 +48,7 @@ export default function Header(props) {
     return (
         <StyledHeader>
             <Link to="/">
-                <ul>
                     <h1>RCP Virtual Golf Museum</h1>
-                </ul>
             </Link>
             <nav>
                 <ul>
