@@ -4,6 +4,7 @@ import architecture from '../../images/architecture.jpeg';
 import gameOfGolf from '../../images/game-of-golf.jpeg';
 import secret from '../../images/secret.jpg';
 import snead from '../../images/snead.jpg';
+import history from '../../images/history.png';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
@@ -16,25 +17,34 @@ const StyledPage = styled.main`
     justify-content: space-evenly;
     align-items: center;
 
-.imageHeader {
-    width: 100%;
-    height: auto;
-    position:top;
-    z-index:1;
-    right:0;
-}
+    .imageHeader {
+        width: 100%;
+        height: auto;
+        position:top;
+        z-index:1;
+        right:0;
+    }
 
- 
+    p {
+    color: #000;
+    
+    }
 
-p {
-  color: #000;
-  
-}
+    img {
+        height:200px;
+        width: auto;
+    }
 
-img {
-    height:200px;
-    width: auto;
-}
+    /* .book-modal {
+        height: 1000px;
+        width: auto;
+    }
+
+    .book-thumbs {
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+    } */
 
     @media (max-width: 1100px) {
         div {
@@ -50,7 +60,7 @@ img {
 function BookPage(props) {
     
     
-    const books = [architecture, gameOfGolf, secret, snead];
+    const books = [architecture, gameOfGolf, secret, snead, history];
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -65,7 +75,7 @@ function BookPage(props) {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque risus sit amet nisl aliquet luctus. Vivamus euismod gravida pellentesque. Mauris ornare porta velit. Suspendisse nec libero ut odio porttitor laoreet eget at metus. Cras facilisis pretium scelerisque. Nullam cursus elementum finibus. Maecenas eu nisl egestas, eleifend magna at, pulvinar arcu. Sed varius eros turpis, eu egestas orci bibendum mollis. Donec a enim felis. Mauris urna nisi, pharetra ut nisi sit amet, scelerisque pellentesque magna. Fusce imperdiet turpis at magna mattis, ac luctus mi bibendum. In aliquet gravida nibh sit amet cursus.
             </p>
             
-            <div className="col">
+            <div className="book-thumbs">
                 {books.map(book => 
                     <Link>
                         <img src={book} alt="book" onClick={handleShow} />
@@ -79,7 +89,6 @@ function BookPage(props) {
                 <Modal.Title>Title</Modal.Title>
                 </Modal.Header>
                 <Modal.Body style={modalStyle}  >
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
                     <img src={architecture} alt="architecture" />
                 </Modal.Body>
                 <Modal.Footer>

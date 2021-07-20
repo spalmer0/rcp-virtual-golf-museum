@@ -62,9 +62,9 @@ export default function Header(props) {
                             <li>
                                 <Link to="/artwork">Artwork</Link>
                             </li>
-                            <li>
+                            {/* <li>
                                 <Link to="" onClick={props.handleLogout}>Logout</Link>
-                            </li>
+                            </li> */}
                         </>
                         :
                         <>
@@ -78,12 +78,12 @@ export default function Header(props) {
                                 <Link to="/artwork">Artwork</Link>
                             </li>
                             
-                            <li>
+                            {/* <li>
                                 <Link to="/login">Login</Link>
                             </li>
                             <li>
                                 <Link to="/signup">Sign Up</Link>
-                            </li>
+                            </li> */}
                         </>
                     }
                 </ul>
