@@ -4,6 +4,7 @@ const StyledFooter = styled.footer`
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top:10px;
 `;
 
 function Footer(props) {

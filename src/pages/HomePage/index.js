@@ -13,13 +13,8 @@ const StyledPage = styled.main`
     .img-wrapper {
         display: inline-block;
         overflow: hidden;
-        max-height:700px;
+        max-height: 50vw;
     }
-
-    /* .img-wrapper img {
-        transition: all .2s ease;
-        vertical-align: middle;
-    } */
     
     .imageHeader {
         display: block;
@@ -30,19 +25,18 @@ const StyledPage = styled.main`
         right:0;
     }
 
-    /* .imageHeader:hover {
-        transform:scale(1.5);
-    } */
-
     .homeBody {
         left: 0;
         bottom: 0;
         width: 100%;
         min-height: 5vh;
         display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 50% 50%;
-        text-decoration: none;   
+        padding: 3px;
+        grid-gap: 3px;
+        /* grid-template-columns: 50% 50%; */
+        grid-template-columns: repeat( auto-fit, minmax(600px, 1fr));
+        /* grid-template-rows: 50% 50%; */
+        /* text-decoration: none;    */
     }
 
     .homeBody img {
@@ -54,34 +48,40 @@ const StyledPage = styled.main`
         display: flex;
         justify-content: center;
         margin: 5px;
-        grid-column: 1 / 1;
-        grid-row: 1 / 1;
+        overflow: auto;
+        /* grid-column: 1 / 1;
+        grid-row: 1 / 1; */
     }
 
     .firstImage {
         display: flex;
         justify-content: center;
         margin: 5px;
-        grid-column: 2 / 2;
-        grid-row: 1 / 1;
+        overflow: auto;
+        /* grid-column: 2 / 2;
+        grid-row: 1 / 1; */
         min-height: 220px;
+        min-width: auto;
     }
 
     .secondText {
         display: flex;
         justify-content: center;
         margin: 5px;
-        grid-column: 2 / 2;
-        grid-row: 2 / 2;
+        overflow: auto;
+        /* grid-column: 2 / 2;
+        grid-row: 2 / 2; */
     }
 
     .secondImage {
         display: flex;
         justify-content: center;
         margin: 5px;
-        grid-column: 1 / 1;
-        grid-row: 2 / 2;
+        overflow: auto;
+        /* grid-column: 1 / 1;
+        grid-row: 2 / 2; */
         min-height: 220px;
+        min-width: auto;
     }
     
 

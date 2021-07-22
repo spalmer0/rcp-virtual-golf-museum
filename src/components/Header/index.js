@@ -5,18 +5,18 @@ const StyledHeader = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
     /* background-color: #000; */
     color: #fff;
     /* box-shadow: 3px 3px 5px 3px lightgrey; */
     /* padding: 0 15px; */
     position:absolute;
     z-index:2;
-    /* right:0; */
-    /* position: sticky; */
 
     nav {
         display: flex;
-        margin-left:30px;
+        margin-right:30px;
+        float: right;
     }
 
     ul {
@@ -26,13 +26,14 @@ const StyledHeader = styled.header`
     }
     
     h1 {
-        margin: 20px 0px 0px 20px;
-        font-size: 4vw;
+        margin: 10px;
+        font-size: clamp(16px, 4vw, 30px);
         margin-right: 20px;
+        
     }
 
     li {
-        font-size: 3vw;
+        font-size: clamp(12px, 3vw, 30px);
         margin-right: 20px;
     }
 
