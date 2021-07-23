@@ -22,19 +22,18 @@ const StyledHeader = styled.header`
     ul {
         display: flex;
         list-style: none;
-        margin-top: 20px;
     }
     
     h1 {
-        margin: 10px;
+        /* margin: 10px; */
         font-size: clamp(16px, 4vw, 30px);
-        margin-right: 20px;
+        margin-left: 10px;
         
     }
 
     li {
         font-size: clamp(12px, 3vw, 30px);
-        margin-right: 20px;
+        margin-right: 10px;
     }
 
 

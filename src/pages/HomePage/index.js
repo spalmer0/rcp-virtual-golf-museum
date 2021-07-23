@@ -34,13 +34,13 @@ const StyledPage = styled.main`
         padding: 3px;
         grid-gap: 3px;
         /* grid-template-columns: 50% 50%; */
-        grid-template-columns: repeat( auto-fit, minmax(600px, 1fr));
+        grid-template-columns: repeat( auto-fit, minmax(400px, 1fr));
         /* grid-template-rows: 50% 50%; */
         /* text-decoration: none;    */
     }
 
     .homeBody img {
-        width: 100%;
+        max-width: 100%;
         height: auto;
     }
 
@@ -60,8 +60,8 @@ const StyledPage = styled.main`
         overflow: auto;
         /* grid-column: 2 / 2;
         grid-row: 1 / 1; */
-        min-height: 220px;
-        min-width: auto;
+        /* min-height: 200px; */
+        /* min-width: auto; */
     }
 
     .secondText {
@@ -80,8 +80,8 @@ const StyledPage = styled.main`
         overflow: auto;
         /* grid-column: 1 / 1;
         grid-row: 2 / 2; */
-        min-height: 220px;
-        min-width: auto;
+        /* min-height: 200px; */
+        /* min-width: auto; */
     }
     
 

@@ -4,7 +4,10 @@ import architecture from '../../images/architecture.jpeg';
 import gameOfGolf from '../../images/game-of-golf.jpeg';
 import secret from '../../images/secret.jpg';
 import snead from '../../images/snead.jpg';
-import history from '../../images/history.png';
+import history from '../../images/history.jpeg';
+import donts from '../../images/donts.jpeg';
+import isles from '../../images/isles.jpeg';
+
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
@@ -20,7 +23,7 @@ const StyledPage = styled.main`
     .img-wrapper {
         display: inline-block;
         overflow: hidden;
-        max-height:700px;
+        max-height:50vw;
         width:100%;
     }
     
@@ -33,26 +36,31 @@ const StyledPage = styled.main`
         right:0;
     }
 
+    .book-thumbs {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        min-height: 5vh;
+        display: grid;
+        grid-gap: 3px;
+        margin: 10px;
+        grid-template-columns: repeat( auto-fit, minmax(150px, 1fr));
+        align-items:center;
+        justify-items:center;
+    }
+
     p {
     color: #000;
+    margin: 10px;
     
     }
 
-    img {
-        height:200px;
-        width: auto;
+    img, a {
+        height: auto;
+        width: 150px;
     }
 
-    /* .book-modal {
-        height: 1000px;
-        width: auto;
-    }
-
-    .book-thumbs {
-        display:flex;
-        justify-content:space-around;
-        align-items:center;
-    } */
+    
 
     @media (max-width: 1100px) {
         div {
@@ -68,7 +76,7 @@ const StyledPage = styled.main`
 function BookPage(props) {
     
     
-    const books = [architecture, gameOfGolf, secret, snead, history];
+    const books = [architecture, gameOfGolf, secret, snead, history, donts, isles];
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
