@@ -75,27 +75,34 @@ const StyledPage = styled.main`
 
 const books = [
     {
-    name: 'achitecture', 
-    img: architecture
+        name: 'achitecture', 
+        img: architecture,
+        title: 'Golf Architecture in America'
     },
     {
         name: 'gameOfGolf',
-        img: gameOfGolf
+        img: gameOfGolf,
+        title: 'The Game of Golf'
     }, {
         name: 'secret',
-        img: secret
+        img: secret,
+        title: 'The Golf Secret'
     }, {
         name: 'snead',
-        img: snead
+        img: snead,
+        title: 'Lessons from Sam Snead'
     }, {
         name: 'history',
-        img: history
+        img: history,
+        title: 'A History of Golf'
     },{
         name: 'donts',
-        img: donts
+        img: donts,
+        title: "Golf Dos and Donts"
     },{
         name: 'isles',
-        img: isles
+        img: isles,
+        title: 'The Golf Courses of the British Isles'
     }]
 
 
@@ -132,12 +139,12 @@ function BookPage(props) {
             <Modal show={show} onHide={handleClose} >
                 <Modal.Header closeButton>
                 <Modal.Title>
-                    {currentImage} 
+                    {currentImage && books.find(book => book.name === currentImage).title} 
                 </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     {
-                        currentImage && <img contentClassName="modalImage" src={books.find(book => book.name === currentImage).img} alt={'currentImage'} />
+                        currentImage && <img src={books.find(book => book.name === currentImage).img} alt={'currentImage'} width="300" height="auto" />
                     }
                 </Modal.Body>
                 <Modal.Footer>
