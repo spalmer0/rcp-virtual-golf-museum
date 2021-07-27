@@ -7,11 +7,9 @@ import snead from '../../images/snead.jpg';
 import history from '../../images/history.jpeg';
 import donts from '../../images/donts.jpeg';
 import isles from '../../images/isles.jpeg';
-
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 const StyledPage = styled.main`
     position: relative;
@@ -60,7 +58,10 @@ const StyledPage = styled.main`
         width: 150px;
     }
 
-    
+    .modalImage {
+        height: 300px;
+        width: auto;
+    }
 
     @media (max-width: 1100px) {
         div {
@@ -72,17 +73,45 @@ const StyledPage = styled.main`
 
 `;
 
+const books = [
+    {
+    name: 'achitecture', 
+    img: architecture
+    },
+    {
+        name: 'gameOfGolf',
+        img: gameOfGolf
+    }, {
+        name: 'secret',
+        img: secret
+    }, {
+        name: 'snead',
+        img: snead
+    }, {
+        name: 'history',
+        img: history
+    },{
+        name: 'donts',
+        img: donts
+    },{
+        name: 'isles',
+        img: isles
+    }]
+
 
 function BookPage(props) {
     
     
-    const books = [architecture, gameOfGolf, secret, snead, history, donts, isles];
     const [show, setShow] = useState(false);
+    const [currentImage, setCurrentImage] = useState('');
 
     const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-    const modalStyle = { display: 'flex' ,
-        flexDirection: 'row' };
+    const handleClick = (imageName) => {
+        setShow(true);
+        setCurrentImage(imageName)
+    } 
+
+    
     
     return (
         <StyledPage>
@@ -95,19 +124,21 @@ function BookPage(props) {
             
             <div className="book-thumbs">
                 {books.map(book => 
-                    <Link>
-                        <img src={book} alt="book" onClick={handleShow} />
-                    </Link> 
+                        <img src={book.img} alt="book" onClick={() => handleClick(book.name)} key={book.name} />
                 )}
             </div>
             
 
-            <Modal {...props} className="book-modal" show={show} onHide={handleClose}>
+            <Modal show={show} onHide={handleClose} >
                 <Modal.Header closeButton>
-                <Modal.Title>Title</Modal.Title>
+                <Modal.Title>
+                    {currentImage} 
+                </Modal.Title>
                 </Modal.Header>
-                <Modal.Body style={modalStyle}  >
-                    <img src={architecture} alt="architecture" />
+                <Modal.Body>
+                    {
+                        currentImage && <img contentClassName="modalImage" src={books.find(book => book.name === currentImage).img} alt={'currentImage'} />
+                    }
                 </Modal.Body>
                 <Modal.Footer>
                 <Button className="book-button" variant="secondary" onClick={handleClose}>
