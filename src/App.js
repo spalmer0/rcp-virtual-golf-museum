@@ -3,6 +3,7 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import BookPage from './pages/BookPage';
 import ArtPage from './pages/ArtPage';
+import CorrespondencePage from './pages/CorrespondencePage';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -25,6 +26,7 @@ export default function App() {
           <Route component={HomePage} path="/" exact />
           <Route component={BookPage} path="/books" />
           <Route component={ArtPage} path="/artwork" />
+          <Route component={CorrespondencePage} path="correspondence" />
         </Switch>
         <Footer />
       </StyledApp>

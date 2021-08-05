@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import '../CorrespondencePage/index.css'
 import oldBooks2 from '../../images/oldbooks2.jpeg';
 import architecture from '../../images/architecture.jpeg';
 import gameOfGolf from '../../images/game-of-golf.jpeg';
@@ -11,71 +11,7 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
 
-const StyledPage = styled.main`
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
 
-    .img-wrapper {
-        display: inline-block;
-        overflow: hidden;
-        max-height:50vw;
-        width:100%;
-    }
-    
-    .imageHeader {
-        display:block;
-        width: 100%;
-        height: auto;
-        position:top;
-        z-index:1;
-        right:0;
-    }
-
-    .book-thumbs {
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        min-height: 5vh;
-        display: grid;
-        grid-gap: 3px;
-        margin: 10px;
-        grid-template-columns: repeat( auto-fit, minmax(150px, 1fr));
-        align-items:center;
-        justify-items:center;
-    }
-
-    p {
-    color: #000;
-    margin: 10px;
-    
-    }
-
-    img, a {
-        height: auto;
-        width: 150px;
-    }
-
-    .btn-secondary {
-        background-color: green;
-    }
-
-    .modal-body {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    @media (max-width: 1100px) {
-        div {
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-        }
-    }
-
-`;
 
 const books = [
     {
@@ -125,7 +61,7 @@ function BookPage(props) {
     
     
     return (
-        <StyledPage>
+        <div>
             <div className="img-wrapper">
                 <img className="imageHeader" alt="Old Books" src={oldBooks2} />
             </div>
@@ -160,7 +96,7 @@ function BookPage(props) {
                 </Button>
                 </Modal.Footer>
             </Modal>
-        </StyledPage>
+        </div>
     ); 
 };
 
