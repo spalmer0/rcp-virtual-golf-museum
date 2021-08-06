@@ -26,7 +26,7 @@ export default function App() {
           <Route component={HomePage} path="/" exact />
           <Route component={BookPage} path="/books" />
           <Route component={ArtPage} path="/artwork" />
-          <Route component={CorrespondencePage} path="correspondence" />
+          <Route component={CorrespondencePage} path="/correspondence" />
         </Switch>
         <Footer />
       </StyledApp>

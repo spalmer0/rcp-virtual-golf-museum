@@ -65,6 +65,9 @@ export default function Header(props) {
                                 <Link to="/artwork">Artwork</Link>
                             </li>
                             {/* <li>
+                                <Link to="/correspondence">Correspondence</Link>
+                            </li> */}
+                            {/* <li>
                                 <Link to="" onClick={props.handleLogout}>Logout</Link>
                             </li> */}
                         </>
@@ -79,6 +82,9 @@ export default function Header(props) {
                             <li>
                                 <Link to="/artwork">Artwork</Link>
                             </li>
+                            {/* <li>
+                                <Link to="/correspondence">Correspondence</Link>
+                            </li> */}
                             
                             {/* <li>
                                 <Link to="/login">Login</Link>

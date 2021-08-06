@@ -58,14 +58,6 @@ const StyledPage = styled.main`
         width: 150px;
     }
 
-    .btn-secondary {
-        background-color: green;
-    }
-
-    .modal-body {
-        display: flex;
-        flex-direction: column-reverse;
-    }
 
     @media (max-width: 1100px) {
         div {
@@ -81,32 +73,39 @@ const books = [
     {
         name: 'achitecture', 
         img: architecture,
-        title: 'Golf Architecture in America'
+        title: 'Golf Architecture in America',
+        description: 'Golf Architecture in America is a masterpiece of early golf literature, written by famed architect George C. Thomas. Considered by historians to be the most influential book ever written on early American golf, this guide provides rare insight into the methods and philosophies used to design, construct, and maintain the most renowned golf courses in the United States.'
     },
     {
         name: 'gameOfGolf',
         img: gameOfGolf,
-        title: 'The Game of Golf'
+        title: 'The Game of Golf',
+        description: 'this book is about golf'
     }, {
         name: 'secret',
         img: secret,
-        title: 'The Golf Secret'
+        title: 'The Golf Secret',
+        description: 'this book is about the secret of begin good at golf, including not being terrible at chipping'
     }, {
         name: 'snead',
         img: snead,
-        title: 'Lessons from Sam Snead'
+        title: 'Lessons from Sam Snead',
+        description: 'Sam Snead enjoyed slacks, like Fred'
     }, {
         name: 'history',
         img: history,
-        title: 'A History of Golf'
+        title: 'A History of Golf',
+        description: 'Description'
     },{
         name: 'donts',
         img: donts,
-        title: "Golf Dos and Donts"
+        title: "Golf Dos and Donts",
+        description: 'DO put the ball in the hole. DONT put the ball in the woods.'
     },{
         name: 'isles',
         img: isles,
-        title: 'The Golf Courses of the British Isles'
+        title: 'The Golf Courses of the British Isles',
+        description: 'there are a lot'
     }]
 
 
@@ -114,12 +113,12 @@ function BookPage(props) {
     
     
     const [show, setShow] = useState(false);
-    const [currentImage, setCurrentImage] = useState('');
+    const [currentBook, setCurrentBook] = useState('');
 
     const handleClose = () => setShow(false);
-    const handleClick = (imageName) => {
+    const handleClick = (bookName) => {
         setShow(true);
-        setCurrentImage(imageName)
+        setCurrentBook(bookName)
     } 
 
     
@@ -148,11 +147,12 @@ function BookPage(props) {
                 </Modal.Header> */}
                 <Modal.Body >
                     {
-                        currentImage && <img src={books.find(book => book.name === currentImage).img} alt={'currentImage'} width="300" height="auto" />
+                        currentBook && <img src={books.find(book => book.name === currentBook).img} alt={'currentImage'} width="300" height="auto" />
                     }
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque risus sit amet nisl aliquet luctus.
-                    Vivamus euismod gravida pellentesque. Mauris ornare porta velit. Suspendisse nec libero ut odio porttitor laoreet eget at metus.
-                    </p>
+                    <br></br>
+                    {
+                        currentBook && books.find(book => book.name === currentBook).description
+                    }
                 </Modal.Body>
                 <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>

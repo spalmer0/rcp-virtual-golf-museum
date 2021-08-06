@@ -31,8 +31,22 @@ const StyledPage = styled.main`
         right:0;
     }
 
+    .artwork-thumbs {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        min-height: 5vh;
+        display: grid;
+        grid-gap: 3px;
+        margin: 10px;
+        grid-template-columns: repeat( auto-fit, minmax(150px, 1fr));
+        align-items:center;
+        justify-items:center;
+    }
+
     p {
     color: #000;
+    margin: 10px;
     
     }
 
